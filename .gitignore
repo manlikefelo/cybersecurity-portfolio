@@ -1,0 +1,11 @@
+# === local-only ===
+*.local
+# human-voiced social drafts, kept local only
+content/
+
+# === OS / editor cruft ===
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
