@@ -54,9 +54,8 @@ investigates.** One coherent environment, not five disconnected tutorials.
 | 8 | **sigmatest** | 🛠️ Tooling | A packaged CLI that lints and unit-tests Sigma rules with no live SIEM | [sigmatest](https://github.com/manlikefelo/sigmatest) |
 
 Projects 5–8 turn the hand-built work above into tested, automated, repeatable work. That
-draws on my QA engineering background, and my QA projects are
-[ruleguard](https://github.com/manlikefelo/ruleguard) and
-[sokoni-qa-portfolio](https://github.com/manlikefelo/sokoni-qa-portfolio).
+draws on my QA engineering background; see my QA project,
+[ruleguard](https://github.com/manlikefelo/ruleguard).
 
 ---
 

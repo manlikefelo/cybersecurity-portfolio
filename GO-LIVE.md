@@ -19,7 +19,6 @@ public in this order, so links resolve as people arrive:
 - [ ] `soc-automation`
 - [ ] `sigmatest`
 - [ ] `ruleguard`
-- [ ] `sokoni-qa-portfolio`
 - [ ] `cybersecurity-portfolio`
 - [ ] `manlikefelo` (**must be public** for the profile README to render)
 
@@ -34,7 +33,7 @@ blocked state.
 - **Name:** Felix Githure
 - **Bio:** QA Engineer & Cybersecurity Analyst · Playwright, API testing, Wazuh, Sigma
 - **Pins, in order:** `cybersecurity-portfolio`, `ruleguard`, `detection-as-code`,
-  `sokoni-qa-portfolio`, `ad-attack-chain`, `sigmatest`
+  `ad-attack-chain`, `detection-engineering`, `sigmatest`
 - **LinkedIn headline:** QA Engineer (Playwright, API Testing) | Cybersecurity Analyst
   (SOC, Wazuh, Sigma, Incident Response) | Open to QA & SOC Analyst Roles
 
