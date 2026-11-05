@@ -97,4 +97,4 @@ Each repo has a `docs/reviewer-path.md` with its own guided tour.
 
 ---
 
-*Built with free tooling in a home lab · all systems self-owned · [contact via GitHub](https://github.com/manlikefelo)*
+*Built with free tooling in a home lab · all systems self-owned · [portfolio website](https://felix-githure.vercel.app) · [contact via GitHub](https://github.com/manlikefelo)*
