@@ -1,8 +1,8 @@
 # Cybersecurity Portfolio — Felix Githure
 
-> **Aspiring SOC Analyst / Junior Penetration Tester.** I build, break, detect, and
-> respond — all in one home lab, all with free tooling, all documented so you can see
-> how I think.
+> **QA Engineer & Cybersecurity Analyst, open to entry-level QA and SOC Analyst roles.**
+> I build, break, detect, and respond — all in one home lab, all with free tooling, all
+> documented so you can see how I think.
 
 This is the index to a **purple-team portfolio**: I stand up an Active Directory + SIEM
 lab, attack it, detect my own attacks, then investigate and respond to them as
@@ -48,6 +48,15 @@ investigates.** One coherent environment, not five disconnected tutorials.
 | 2 | **Detection engineering** | 🔵 Blue | Sigma + Wazuh rules that detect the exact attacks I ran, tuned for false positives | [detection-engineering](https://github.com/manlikefelo/detection-engineering) |
 | 3 | **Web-app pentest + report** | 🔴 Red | OWASP Top 10 testing, a chained exploit, a professional PDF report | [webapp-pentest-juiceshop](https://github.com/manlikefelo/webapp-pentest-juiceshop) |
 | 4 | **Incident response + threat hunt** | 🔵 Blue | Timeline reconstruction, triage, hunting, IR process | [ir-threat-hunt](https://github.com/manlikefelo/ir-threat-hunt) |
+| 5 | **Detection-as-code** | 🟣 Purple | Sigma rules under version control, unit tests, and CI that fails on a bad rule | [detection-as-code](https://github.com/manlikefelo/detection-as-code) |
+| 6 | **Adversary emulation** | 🟣 Purple | Measured detection coverage (4 of 8 techniques), then a new rule to close a gap | [adversary-emulation](https://github.com/manlikefelo/adversary-emulation) |
+| 7 | **SOC automation** | 🔵 Blue | A tested pipeline that enriches, scores, and tickets Wazuh alerts | [soc-automation](https://github.com/manlikefelo/soc-automation) |
+| 8 | **sigmatest** | 🛠️ Tooling | A packaged CLI that lints and unit-tests Sigma rules with no live SIEM | [sigmatest](https://github.com/manlikefelo/sigmatest) |
+
+Projects 5–8 turn the hand-built work above into tested, automated, repeatable work. That
+draws on my QA engineering background, and my QA projects are
+[ruleguard](https://github.com/manlikefelo/ruleguard) and
+[sokoni-qa-portfolio](https://github.com/manlikefelo/sokoni-qa-portfolio).
 
 ---
 

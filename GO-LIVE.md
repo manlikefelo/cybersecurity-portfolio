@@ -1,57 +1,55 @@
 # Go-live checklist
 
-Everything is built and pushed **private**. These are the final steps to take the
-portfolio public — deliberately left for you to run.
+Run the safety check first: Gitleaks over the full history of every repo, plus a review
+of evidence images. Visibility changes are hard to take back, because public content can
+be cached or forked.
 
-## 1. Flip the repos to public
+## 1. Make the repos public
 
-Make these public (Settings → General → Danger Zone → Change visibility), in this order
-so links resolve as people arrive:
+`lab-walkthroughs` is already public and `portfolio-website` stays private. Make these
+public in this order, so links resolve as people arrive:
 
 - [ ] `security-homelab`
 - [ ] `ad-attack-chain`
 - [ ] `detection-engineering`
 - [ ] `webapp-pentest-juiceshop`
 - [ ] `ir-threat-hunt`
-- [ ] `lab-walkthroughs` (do this before `manlikefelo` — the profile README links 25 PDFs here)
-- [ ] `cybersecurity-portfolio` (this meta-repo)
+- [ ] `detection-as-code`
+- [ ] `adversary-emulation`
+- [ ] `soc-automation`
+- [ ] `sigmatest`
+- [ ] `ruleguard`
+- [ ] `sokoni-qa-portfolio`
+- [ ] `cybersecurity-portfolio`
 - [ ] `manlikefelo` (**must be public** for the profile README to render)
 
-Or with the GitHub CLI:
+## 2. Require CI on detection-as-code
 
-```bash
-for r in security-homelab ad-attack-chain detection-engineering \
-         webapp-pentest-juiceshop ir-threat-hunt cybersecurity-portfolio manlikefelo; do
-  gh repo edit manlikefelo/$r --visibility public --accept-visibility-change-consequences
-done
-```
+Require `detections-ci` to pass on `main`, so the README's "cannot be merged" claim is
+true. Then open a PR with the rule from `examples/broken-rule-demo/` and capture the
+blocked state.
 
-## 2. Pin the repos on your profile
+## 3. Set up the profile
 
-On your GitHub profile → "Customize your pins" → pin these 6, in this order:
-`cybersecurity-portfolio` (first), `ad-attack-chain`, `detection-engineering`,
-`webapp-pentest-juiceshop`, `ir-threat-hunt`, `security-homelab`.
+- **Name:** Felix Githure
+- **Bio:** QA Engineer & Cybersecurity Analyst · Playwright, API testing, Wazuh, Sigma
+- **Pins, in order:** `cybersecurity-portfolio`, `ruleguard`, `detection-as-code`,
+  `sokoni-qa-portfolio`, `ad-attack-chain`, `sigmatest`
+- **LinkedIn headline:** QA Engineer (Playwright, API Testing) | Cybersecurity Analyst
+  (SOC, Wazuh, Sigma, Incident Response) | Open to QA & SOC Analyst Roles
 
-## 3. Verify it looks right
+## 4. Deploy the website
+
+Import `portfolio-website` into Vercel, confirm `url` in `src/config/site.ts` matches the
+live address, and redeploy if it changed.
+
+## 5. Verify
 
 - [ ] Profile README renders at `github.com/manlikefelo`.
-- [ ] The meta-repo README's links all resolve (they use absolute URLs now).
-- [ ] Spot-check one `reviewer-path.md` per repo.
-- [ ] Click a few walkthrough links in the profile README — they point at
-      `lab-walkthroughs/blob/main/...` and 404 until that repo is public.
-- [ ] Confirm no `content/` folders or `.env`/session files are public (they're
-      gitignored — quick sanity check anyway).
+- [ ] Every link in the profile README, the index README, and the website resolves.
+- [ ] CI badges render, and the CV downloads from the website.
+- [ ] No `content/` folders or `.env`/session files are public.
 
-## 4. Publish the walkthrough posts
+## 6. Publish the posts
 
-Follow [`content/PUBLISHING-GUIDE.md`](content/PUBLISHING-GUIDE.md) (local only) — the
-posts are drafted and ordered; post them as each repo goes public.
-
-## 5. Optional polish
-
-- Add a repo description + topics (`cybersecurity`, `wazuh`, `active-directory`,
-  `detection-engineering`, `pentesting`, `blue-team`, `red-team`; for
-  `lab-walkthroughs` use `tryhackme`, `hackthebox`, `writeups`) to each repo for
-  discoverability.
-- Update your GitHub profile bio + LinkedIn headline to
-  *"SOC Analyst / Cybersecurity Analyst"* to match the profile README.
+Follow [`content/PUBLISHING-GUIDE.md`](content/PUBLISHING-GUIDE.md) (local only).
