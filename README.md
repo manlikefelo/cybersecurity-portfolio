@@ -11,11 +11,10 @@ and a quantified result.
 
 ---
 
-## The one idea that ties it together
+## How the projects connect
 
 Most portfolios show *either* offense *or* defense. This one shows **both sides of the
-same event**: the "purple-team" thinking that makes an entry-level candidate look a cut
-above:
+same event**:
 
 ```
         ┌───────────────────────────────────────────────┐
@@ -41,7 +40,7 @@ investigates.** One coherent environment, not five disconnected tutorials.
 
 ## The projects
 
-| # | Project | Team | What it proves | Repo |
+| # | Project | Team | What it shows | Repo |
 |---|---------|------|----------------|------|
 | 0 | **Home Lab foundation** | Both | Build & document infrastructure on a 16 GB budget | [security-homelab](https://github.com/manlikefelo/security-homelab) |
 | 1 | **AD attack chain** | Red | Enumeration, Kerberoasting, AS-REP, DCSync, BloodHound → Domain Admin | [ad-attack-chain](https://github.com/manlikefelo/ad-attack-chain) |
@@ -66,30 +65,28 @@ draws on my QA engineering background; see my QA project,
 - **9 red-team actions** (4 AD techniques + 5 web findings), each mapped to ATT&CK, each
   with real evidence.
 - **2 incident reports** on the NIST IR lifecycle with reconstructed attack timelines.
-- **3 documented detection-tuning cases** (2 false positives + 1 false negative): the
-  part hiring managers ask about.
+- **3 documented detection-tuning cases** (2 false positives + 1 false negative).
 - **100% free/local tooling**, engineered to run on **16 GB of RAM** by phasing
   workloads.
 
 ---
 
-## Where to start (a 3-minute tour for a hiring manager)
+## Where to start
 
-1. **The 90-second story:** [detection-engineering → one detection end to end](https://github.com/manlikefelo/detection-engineering#the-part-hiring-managers-ask-about), attack → log → rule → alert.
-2. **Red skill:** [ad-attack-chain → the BloodHound attack path + executive summary](https://github.com/manlikefelo/ad-attack-chain#read-next).
-3. **Writing skill:** [webapp-pentest-juiceshop → the PDF report](https://github.com/manlikefelo/webapp-pentest-juiceshop#the-report-is-the-deliverable).
-4. **Investigative skill:** [ir-threat-hunt → the INC-001 timeline](https://github.com/manlikefelo/ir-threat-hunt#the-headline-artifact-the-timeline).
+1. **Detection work:** [detection-engineering: tuning and coverage](https://github.com/manlikefelo/detection-engineering#tuning-and-coverage), with each rule checked from attack → log → rule → alert.
+2. **Red skill:** [ad-attack-chain: the BloodHound attack path + executive summary](https://github.com/manlikefelo/ad-attack-chain#read-next).
+3. **Writing skill:** [webapp-pentest-juiceshop: the PDF report](https://github.com/manlikefelo/webapp-pentest-juiceshop#the-report-is-the-deliverable).
+4. **Investigative skill:** [ir-threat-hunt: the INC-001 timeline](https://github.com/manlikefelo/ir-threat-hunt#the-timeline).
 
-Each repo has a `docs/reviewer-path.md` with its own guided tour.
+Each repo has a `docs/reviewer-path.md` that says where to start.
 
 ---
 
-## What I want you to notice
+## How I work
 
-- **I document the messy bits.** Where a tool failed (sqlmap said "not injectable"),
+- **I document what went wrong.** Where a tool failed (sqlmap said "not injectable"),
   where my evidence has limits (a headless XSS I couldn't screenshot), where a detection
-  silently missed an encoded payload: I write it down. Honest work is more useful than
-  tidy work.
+  silently missed an encoded payload: I write it down.
 - **Every attack has a defense, and every defense has a fix.** I don't just break
   things; I show the detection *and* the remediation.
 - **Constraints drove the engineering.** The whole lab runs on 16 GB by phasing which
